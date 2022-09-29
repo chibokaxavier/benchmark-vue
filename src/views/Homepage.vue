@@ -50,7 +50,6 @@ export default defineComponent({
       All Blogs
     </div>
     <div class="md:grid md:grid-cols-3">
-      <div></div>
       <div
         v-for="onepost in data"
         :key="onepost.id"

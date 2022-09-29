@@ -45,11 +45,12 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="w-[84.5%]">
-    <div class="font-bold text-[40px] flex justify-center text-gray-600">
+  <div class=" md:w-[84.5%] ">
+    <div class="font-bold text-[30px] md:text-[40px] flex justify-center text-gray-600">
       All Blogs
     </div>
-    <div class="grid grid-cols-3">
+    <div class="md:grid md:grid-cols-3">
+      <div></div>
       <div
         v-for="onepost in data"
         :key="onepost.id"
@@ -64,22 +65,24 @@ export default defineComponent({
           transition
           ease-in-out
           delay-150
-          w-[370px]
-          h-[370px]
+          h-[350px]
+          md:w-[370px]
+          md:h-[370px]
           relative
           pb-[20px]
+          flex justify-center
         "
       >
         <div class="">
           <router-link :to="{ name: 'Onepost', params: { id: onepost.id } }">
             <div>
-              <h2 class="font-semibold text-[20px] flex justify-center">
+              <h2 class="font-semibold text-[18px] md:text-[20px] flex justify-center">
                 {{ onepost.title }}
               </h2>
               <div class="flex justify-center">
                 <img
                   :src="onepost.image"
-                  class="rounded-full h-[200px] w-[200px]"
+                  class="rounded-full h-[150px] w-[150px] md:h-[200px] md:w-[200px]"
                   alt=""
                 />
               </div>

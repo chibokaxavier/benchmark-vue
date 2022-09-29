@@ -24,19 +24,24 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="p-2" id="link">
+  <div class="md:p-2 flex md:block mt-5 md:mt-0 h-[50px] md:h-0" id="link">
     <router-link to="/profile">
-      <div class="flex">
-        <div class="h-[30px] w-[30px] bg-black rounded-full mt-2"></div>
-        <span class="pt-2 pl-2 font-semibold text-[20px] text-gray-700">{{
+      <div class="w-[130px] md:w-full">
+        <span class="hidden md:block  md:pt-2 md:pl-2 font-semibold text-[20px] text-gray-700">{{
+          authStore.user?.displayName
+        }}</span>
+          <span class=" md:hidden font-semibold text-[15px] ml-5 text-gray-700">{{
           authStore.user?.displayName
         }}</span>
       </div></router-link
     >
     <router-link to="/">
-      <div class="flex my-10 rounded-md p-1">
-        <span class="pl-2 pr-4 font-semibold text-[20px] link-name"
+      <div class="flex md:my-10 rounded-md p-1">
+        <span class="hidden md:block pl-2 pr-4 font-semibold text-[20px] link-name"
           >ALL BLOGS</span
+        >
+        <span class="md:hidden font-semibold text-[15px]  ml-5 link-name"
+          >BLOGS</span
         >
         <div class="">
           <svg
@@ -45,7 +50,7 @@ export default defineComponent({
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-[30px] h-[30px]"
+            class="w-[30px] h-[30px] hidden md:block"
           >
             <path
               stroke-linecap="round"
@@ -56,9 +61,12 @@ export default defineComponent({
         </div></div
     ></router-link>
     <router-link to="/users">
-      <div class="flex my-10 rounded-md p-1">
-        <span class="pl-2 pr-4 font-semibold text-[20px] link-name"
+      <div class="flex md:my-10 rounded-md p-1">
+        <span class=" hidden md:block pl-2 pr-4 font-semibold text-[20px] link-name"
           >ALL USERS</span
+        >
+        <span class="md:hidden font-semibold text-[15px] ml-5 link-name"
+          >USERS</span
         >
         <div class="">
           <svg
@@ -67,7 +75,7 @@ export default defineComponent({
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-[30px] h-[30px]"
+            class="w-[30px] h-[30px] hidden md:block"
           >
             <path
               stroke-linecap="round"
@@ -78,8 +86,11 @@ export default defineComponent({
         </div></div
     ></router-link>
     <router-link to="/profile/create">
-      <div class="flex my-10 rounded-md p-1">
-        <span class="pl-2 pr-4 font-semibold text-[20px] link-name"
+      <div class="flex md:my-10 rounded-md p-1 w-[130px] md:w-full">
+        <span class=" hidden md:block pl-2 pr-4 font-semibold text-[20px] link-name"
+          >ADD POST</span
+        >
+        <span class="md:hidden  font-semibold text-[15px]  ml-5 link-name"
           >ADD POST</span
         >
         <div class="">
@@ -89,7 +100,7 @@ export default defineComponent({
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-[30px] h-[30px]"
+            class="w-[30px] h-[30px] hidden md:block"
           >
             <path
               stroke-linecap="round"
@@ -99,7 +110,7 @@ export default defineComponent({
           </svg>
         </div></div
     ></router-link>
-    <div class="flex py-10 relative">
+    <div class="md:flex py-10 md:relative hidden">
       <button
         @click="logOut"
         class="

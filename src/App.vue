@@ -26,7 +26,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="flex ">
+  <div class="md:flex ">
      <Sidebar />
      <!-- <div class="ml-[100px]"> -->
         <RouterView/>

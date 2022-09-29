@@ -80,7 +80,7 @@
                 w-[100px]
               "
             >
-              Sign Up
+              Sign Upp
             </button></router-link
           >
         </div>
